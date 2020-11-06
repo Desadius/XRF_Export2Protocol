@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XRF_Export2Protocol"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="768" Width="1024">
+    <StackPanel>
+        <Menu>
+            <MenuItem Header="Otevřít exportní soubor" x:Name="MenuItemOpen" Click="MenuItemOpen_Click"/>
+            <MenuItem Header="Konec" x:Name="MenuItemClose" Click="MenuItemClose_Click"/>
+        </Menu>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" MinHeight="200"/>
+                <RowDefinition Height="3*" MinHeight="500"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <GroupBox Header="Hlavička protokolu" Margin="10 3" Height="auto" MinHeight="195" >
+                    
+                </GroupBox>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+            <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <GroupBox Header="Data" Margin="10 3" DockPanel.Dock="Top" MinHeight="495">
+                    <DataGrid x:Name="DataGridImported">
+
+                    </DataGrid>
+                </GroupBox>
+
+            </DockPanel>
+                
+            </StackPanel>
+            
+        </Grid>
         
-    </Grid>
+    </StackPanel>
 </Window>
